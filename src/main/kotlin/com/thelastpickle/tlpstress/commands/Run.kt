@@ -147,6 +147,7 @@ class Run : IStressCommand {
     val session by lazy {
 
         var builder = Cluster.builder()
+                .withSSL()
                 .addContactPoint(host)
                 .withCredentials(username, password)
                 .withQueryOptions(options)

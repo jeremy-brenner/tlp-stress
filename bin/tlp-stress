@@ -20,4 +20,4 @@ if [ "x$TLP_STRESS_LOG4J" != "x" ]; then
     export LOG4J_CONFIGURATION_FILE="$TLP_STRESS_LOG4J"
 fi
 
-java -Xmx1G -XX:+UseG1GC -jar $TLP_STRESS_JAR "$@"
+java -Xmx1G -XX:+UseG1GC ${JAVA_OPTS} -jar $TLP_STRESS_JAR "$@"
